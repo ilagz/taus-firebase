@@ -489,7 +489,7 @@ exports.saveUserData = functions.https.onRequest((req, res) => {
 
             const { Storage } = require('@google-cloud/storage');
             const gcs = new Storage();
-            var bucket = gcs.bucket('ncau-ed-taus-savestories.appspot.com');
+            var bucket = gcs.bucket('ncau-tech-taus-uat.appspot.com');
 
             var remoteReadStream = bucket.file(filename).createReadStream();
 
@@ -609,7 +609,7 @@ exports.saveFiles = functions.https.onRequest((req, res) => {
                 return new Promise((resolve, reject) => {
 
                     // Your Google Cloud Platform project ID
-                    const projectId = 'ncau-ed-taus-savestories.appspot.com';
+                    const projectId = 'ncau-tech-taus-uat.appspot.com';
 
                     // Creates a client
                     const storage = new Storage();
@@ -622,7 +622,7 @@ exports.saveFiles = functions.https.onRequest((req, res) => {
                     })
                         .then((response) => {
 
-                            gcFile = storage.bucket('ncau-ed-taus-savestories.appspot.com').file(fileName)
+                            gcFile = storage.bucket('ncau-tech-taus-uat.appspot.com').file(fileName)
 
                             // Pipe the axios response data through Google Cloud
                             response.data
@@ -664,7 +664,7 @@ exports.saveFiles = functions.https.onRequest((req, res) => {
                     console.log("Complete.", result);
 
                     const gcs = new Storage();
-                    var bucket = gcs.bucket('ncau-ed-taus-savestories.appspot.com');
+                    var bucket = gcs.bucket('ncau-tech-taus-uat.appspot.com');
 
                     var remoteReadStream = bucket.file('myausfiles.json').createReadStream();
 
@@ -764,7 +764,7 @@ exports.saveFiles2 = functions.https.onRequest((req, res) => {
             return new Promise((resolve, reject) => {
 
                 // Your Google Cloud Platform project ID
-                const projectId = 'ncau-ed-taus-savestories.appspot.com';
+                const projectId = 'ncau-tech-taus-uat.appspot.com';
 
                 // Creates a client
                 const storage = new Storage();
@@ -777,7 +777,7 @@ exports.saveFiles2 = functions.https.onRequest((req, res) => {
                 })
                     .then((response) => {
 
-                        gcFile = storage.bucket('ncau-ed-taus-savestories.appspot.com').file(fileName)
+                        gcFile = storage.bucket('ncau-tech-taus-uat.appspot.com').file(fileName)
 
                         // Pipe the axios response data through Google Cloud
                         response.data
@@ -821,7 +821,7 @@ exports.saveFiles2 = functions.https.onRequest((req, res) => {
 
                 const gcs = new Storage();
                 getMetadata(gcs).catch(console.error);
-                var bucket = gcs.bucket('ncau-ed-taus-savestories.appspot.com');
+                var bucket = gcs.bucket('ncau-tech-taus-uat.appspot.com');
 
                 var remoteReadStream = bucket.file('myausXXfiles.json.gz').createReadStream();
 
@@ -988,7 +988,7 @@ function importFile(filename, filekey) {
 
     const { Storage } = require('@google-cloud/storage');
     const gcs = new Storage();
-    var bucket = gcs.bucket('ncau-ed-taus-savestories.appspot.com');
+    var bucket = gcs.bucket('ncau-tech-taus-uat.appspot.com');
     var remoteReadStream;
     JSONStream = require('JSONStream');
     es = require('event-stream');
@@ -1077,7 +1077,7 @@ function getMetadata(storage) {
     // Gets the metadata for the file
 
     var myfile = storage
-        .bucket('ncau-ed-taus-savestories.appspot.com')
+        .bucket('ncau-tech-taus-uat.appspot.com')
         .file('myausXXfiles.json.gz');
 
     var newMetadata = {
