@@ -14,8 +14,8 @@
 
 First run *firebase use --add* to add the below projects:
 
-Add Production: **ncau-ed-taus-savestories** using the alias **production** 
-Add UAT:        **ncau-tech-taus-uat** using the alias **uat** 
+Add Production: **ncau-ed-taus-savestories** using the alias **production** <br />
+Add UAT:        **ncau-tech-taus-uat** using the alias **uat** <br />
 Add SIT:        **ncau-tech-taus-sit** using the alias **sit** 
 
 Switch to a particular project/environment through *firebase use [environment]*, ie. *firebase use uat*
