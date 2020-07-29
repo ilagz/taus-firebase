@@ -1,1 +1,7 @@
-{}
+{
+  "projects": {
+    "production": "ncau-ed-taus-savestories",
+    "uat": "ncau-tech-taus-uat",
+    "sit": "ncau-tech-taus-sit"
+  }
+}
